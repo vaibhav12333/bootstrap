@@ -36,6 +36,65 @@
      </div>  
 
     </nav>
+    <div class="modal fade" id="reservetable"  role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reservetable">Reserve Table</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="radio" class="col-form-label col-5 col-md-2 ml-4">Number of Guest</label>
+                        <div class=" col-13 col-md-8  d-flex align-items-center">
+                            <input type="radio" class="custom-radio ml-3" id="custom" name="no. of guest" value="1">
+                            <label for="custom" class="col-form-label ml-1"> 1</label>
+                            <input type="radio" id="radio" class="custom-radio ml-3" name="no. of guest" value="2">
+                            <label for="custom" class="col-form-label ml-1"> 2</label>
+                            
+                            <input type="radio" class="custom-radio ml-3" name="no. of guest" value="3">
+                            <label for="custom" class="col-form-label ml-1"> 3</label>
+                            
+                            <input type="radio" class="custom-radio ml-3" name="no. of guest" value="4">
+                            <label for="custom" class="col-form-label ml-1"> 4</label>
+                            
+                            <input type="radio" class="custom-radio ml-3" name="no. of guest" value="5">
+                            <label for="custom" class="col-form-label ml-1"> 5</label>
+                            
+                            <input type="radio" class="custom-radio ml-3" name="no. of guest" value="6">
+                            <label for="custom" class="col-form-label ml-1"> 6</label>
+                        </div>
+                        
+                    </div>
+                    <div class=" form-group row">
+                        <label for="#btn" class="col-form-label col-5 col-md-2 ml-4">Section</label>
+                        <div class="btn-group btn-group-toggle offset-1 col-md-4 text-left ml-3" data-toggle="buttons">
+                            <label class="btn  btn-danger active" type="button"><input type="radio" name="options" value="1" checked>Non-Smoking</label>
+                            <label class="btn  btn-warning" type="button"><input type="radio" name="options" value="2">Smoking</label>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row">
+                        <label for="date" class="col-form-label col-5 col-md-2 ml-4">Date and Time</label>
+                        <div class="d-flex align-items-center">
+                        <input type="text" class="form-control  offset-1 col-md-5" placeholder="Date">
+                        <input type="text" class="form-control offset-1 col-md-5" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class=" form-group row">
+                        <div class="offset-3 col-md-4">
+                         <div type = "button" class=" btn btn-secondary btn-sm mr-1" data-dismiss="modal">Cancel</div>
+                         <div class="btn btn-sm btn-primary ml-1 my-4">Reserve</div>
+                        </div>
+                   </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -85,7 +144,7 @@
                 </div>
                 <div class="col-6 col-lg-3 text-center d-flex align-self-center">
 
-                    <a class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true" title="Or call us at <br><strong>+91 8800223232</strong></br>" data-placement="bottom" href="#reservetable">Reserve Table</a>
+                    <a class="btn btn-warning btn-sm btn-block"  data-toggle="modal"   data-target="#reservetable">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -288,11 +347,6 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
     
-        });
-    </script>
     
     </html>

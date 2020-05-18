@@ -54,3 +54,6 @@ address{
     left: 0;
     min-height: 300px;
 }
+label{
+    font-weight: 500;
+}
